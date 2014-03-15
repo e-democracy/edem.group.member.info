@@ -1,0 +1,17 @@
+<div id="gs-group-member-info-logged-in-member-info" 
+     class="gs-group-member-info" role="region" 
+     aria-labelledby="gs-group-member-info-logged-in-member-info-h">
+  <h3 id="gs-group-member-info-logged-in-member-info-h">Membership</h3>
+  <p class="minor" tal:condition="view/isMember">
+    You are a member.
+    <span role="navigation">
+      <a
+         tal:attributes="href string:/groups/leave.html?groupId=${view/groupInfo/id}" 
+         href="../leave.html?"><strong>Leave group?</strong></a>
+      <a title="Change your email settings" class="icon-alone"
+         tal:attributes="href string:${view/groupInfo/relative_url}/email_settings.html"
+         href="email_settings.html"><strong aria-hidden="true" 
+                                            data-icon="&#x2699;"></strong>
+         <span class="screen-reader-text">Email settings</span></a></span>
+  </p>
+</div><!--gs-group-member-info-logged-in-member-info-->

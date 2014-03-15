@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configure xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  xmlns:five="http://namespaces.zope.org/five">
+
+    
+  <browser:viewlet
+    name="gs-group-member-info-logged-in-member-info"
+    manager="gs.group.home.interfaces.IGroupHomepageSecondary"
+    layer="edem.skin.interfaces.IEDemLayer"
+    class="gs.group.member.info.memberinfo.LoggedInMemberInfo"
+    template="browser/templates/loggedinmemberinfo.pt"
+    permission="zope2.View" 
+    title="Membership Information"
+    weight="10" />
+  <browser:viewlet
+    name="gs-group-member-info-public-group-info"
+    manager="gs.group.home.interfaces.IGroupHomepageSecondary"
+    layer="edem.skin.interfaces.IEDemLayer"
+    class="gs.group.member.info.memberinfo.PublicGroupMemberInfo"
+    template="browser/templates/publicgroupinfo.pt"
+    permission="zope2.View" 
+    title="Membership Information"
+    weight="10" />
+  <browser:viewlet
+    name="gs-group-member-info-private-group-info"
+    manager="gs.group.home.interfaces.IGroupHomepageSecondary"
+    layer="edem.skin.interfaces.IEDemLayer"
+    class="gs.group.member.info.memberinfo.PrivateGroupMemberInfo"
+    template="browser/templates/privategroupinfo.pt"
+    permission="zope2.View" 
+    title="Membership Information"
+    weight="10" />
+</configure>
+

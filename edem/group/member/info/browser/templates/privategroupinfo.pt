@@ -1,0 +1,32 @@
+<div id="gs-group-member-info-private-group-info" 
+     class="gs-group-member-info" role="region"
+     aria-labelledby="gs-group-member-info-private-group-info-h">
+  <h3 id="gs-group-member-info-private-group-info-h">Membership</h3>
+  <p class="minor">
+    This group is <strong>private:</strong> only members can view and make
+    posts.
+  </p>
+  <div id="gs-group-member-info-private-group-info-actions"
+       class="well well-small">
+    <div id="gs-group-member-info-private-group-info-anon-sign-in"
+         tal:condition="view/loggedInUser/anonymous">
+      <h4>Already a member?</h4>
+      <p>
+        <a class="btn btn-small" data-icon="&#x1f512;"
+           tal:attributes="href string:/login.html?came_from=${view/groupInfo/url}"
+           href="/login.html">Sign in</a> to participate.
+      </p>
+    </div><!--gs-group-member-info-private-group-info-anon-sign-in-->
+    <div id="gs-group-member-info-private-group-info-anon-sign-up">
+      <h4>Not a member?</h4>
+      <p>
+        <a class="btn btn-small" data-icon="&#10010;"
+           tal:define="request string:${view/groupInfo/url}/request.html;
+                       register string:/request_registration.html?form.came_from=${request};
+                       anon view/loggedInUser/anonymous;"
+           tal:attributes="href python:register if anon else request;"
+           href="request.html">Request</a> to become a member.
+      </p>
+    </div><!--gs-group-member-info-private-group-info-anon-sign-up-->
+  </div><!--gs-group-member-info-private-group-info-actions-->
+</div><!--gs-group-member-info-private-group-info-->
