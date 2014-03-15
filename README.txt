@@ -21,15 +21,20 @@ This product customizes parts of the Group Membership viewlets provided by
 Content Provider** and this content provider to the Logged-In Member, Public
 Group, and Private Group membership viewlets.
 
-E-Democracy Policies Info Content Provider
-==========================================
+E-Democracy Policies Info Grou Content Provider
+===============================================
 
-A simple content provider named **edem.PoliciesInfo** that produces two
+A simple group content provider named **edem.PoliciesInfo** that produces two
 unordered lists:
 
 - The first list provides (if applicable) information about who the manager of
   the group is, how to contact the forum manager, and how many times in a 24
   hour period members can post
+  
+  - The email address displayed for the forum manager is defined by the 
+    **fm_email_address** property of the group. If this property is not set,
+    no email address will be displayed.
+
 - The second list provides links to the policy documents of the group and site
 
 To add this content provider to a view, place the following into the view's

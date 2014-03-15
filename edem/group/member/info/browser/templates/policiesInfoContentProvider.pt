@@ -1,4 +1,4 @@
-  <div tal:define="view options/view;"
+  <div tal:define="view options/view; context view/context;"
        id="edem-policies-info" class="minor">
     <ul>
       <li tal:condition="view/forumManager">
