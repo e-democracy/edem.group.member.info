@@ -6,6 +6,7 @@
     This group is <strong>private:</strong> only members can view and make
     posts.
   </p>
+  <div tal:replace="structure provider:edem.PoliciesInfo"/>
   <div id="gs-group-member-info-private-group-info-actions"
        class="well well-small">
     <div id="gs-group-member-info-private-group-info-anon-sign-in"

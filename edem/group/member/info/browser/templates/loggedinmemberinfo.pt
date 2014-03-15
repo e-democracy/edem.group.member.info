@@ -14,4 +14,5 @@
                                             data-icon="&#x2699;"></strong>
          <span class="screen-reader-text">Email settings</span></a></span>
   </p>
+  <div tal:replace="structure provider:edem.PoliciesInfo"/>
 </div><!--gs-group-member-info-logged-in-member-info-->

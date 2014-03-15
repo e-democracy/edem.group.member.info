@@ -1,0 +1,22 @@
+  <div tal:define="view options/view;"
+       id="edem-policies-info" class="minor">
+    <ul>
+      <li tal:condition="view/forumManager">
+        <a tal:attributes="href view/forumManager/url | string:[Participation Coach]"><span tal:replace="view/forumManager/name | string:[PARTICIPATION COACH]"/></a> is the volunteer Forum Manager. <tal:block condition="python: hasattr(context,'fm_email_address')">The Forum Manager can be emailed at <a href="#" tal:attributes="href string:mailto:${context/fm_email_address}"><span class="fm_email_address" tal:replace="context/fm_email_address">email address</span></a></tal:block>
+      </li>
+      <li tal:condition="view/postRateLimit">
+        Members may post no more than <strong tal:content="view/postRateLimit">limit</strong> <span tal:replace="python: 'messages' if view.postRateLimit > 1 else 'message'">messages</span> in a 24 hour period
+      </li>
+    </ul>
+    <ul class="muted">
+      <li tal:condition="context/charter | nothing">
+        <a href="charter">Group Charter</a>
+      </li>
+      <li>
+        <a href="/policies/privacy/">Privacy and Public Life Policy</a>
+      </li>
+      <li>
+        <a href="/policies/aup/">Rules of Participation</a>
+      </li>
+    </ul>
+  </div>

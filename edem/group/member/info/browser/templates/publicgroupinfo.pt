@@ -6,6 +6,7 @@
     This group is <strong>public</strong> to view, but only members can
     post.
   </p>
+  <div tal:replace="structure provider:edem.PoliciesInfo"/>
   <div tal:condition="view/loggedInUser/anonymous"
        id="gs-group-member-info-public-group-info-anon"
        class="well well-small">

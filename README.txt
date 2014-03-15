@@ -17,9 +17,25 @@ Introduction
 ===========
 
 This product customizes parts of the Group Membership viewlets provided by
-`gs.group.member.info`_. Currently, it adds policy, posting rate limit, and
-forum manager information to the Logged-In Member and Public Group membership
-viewlets.
+`gs.group.member.info`_. Currently, it defines the **E-Democracy Policies Info
+Content Provider** and this content provider to the Logged-In Member, Public
+Group, and Private Group membership viewlets.
+
+E-Democracy Policies Info Content Provider
+==========================================
+
+A simple content provider named **edem.PoliciesInfo** that produces two
+unordered lists:
+
+- The first list provides (if applicable) information about who the manager of
+  the group is, how to contact the forum manager, and how many times in a 24
+  hour period members can post
+- The second list provides links to the policy documents of the group and site
+
+To add this content provider to a view, place the following into the view's
+template:
+
+  <div tal:replace="structure provider:edem.PoliciesInfo"/>
 
 Resources
 =========
