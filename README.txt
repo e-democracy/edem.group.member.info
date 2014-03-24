@@ -21,8 +21,8 @@ This product customizes parts of the Group Membership viewlets provided by
 Content Provider** and this content provider to the Logged-In Member, Public
 Group, and Private Group membership viewlets.
 
-E-Democracy Policies Info Grou Content Provider
-===============================================
+E-Democracy Policies Info Group Content Provider
+================================================
 
 A simple group content provider named **edem.PoliciesInfo** that produces two
 unordered lists:
