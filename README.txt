@@ -18,8 +18,8 @@ Introduction
 
 This product customizes parts of the Group Membership viewlets provided by
 `gs.group.member.info`_. Currently, it defines the **E-Democracy Policies Info
-Content Provider** and this content provider to the Logged-In Member, Public
-Group, and Private Group membership viewlets.
+Content Provider** and adds his content provider to the Logged-In Member, 
+Public Group, and Private Group membership viewlets.
 
 E-Democracy Policies Info Group Content Provider
 ================================================
