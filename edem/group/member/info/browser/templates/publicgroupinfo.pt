@@ -1,15 +1,17 @@
 <div id="gs-group-member-info-public-group-info" 
      class="gs-group-member-info" role="region" 
      aria-labelledby="gs-group-member-info-public-group-info-h">
-  <h3 id="gs-group-member-info-public-group-info-h">Membership</h3>
-  <p class="minor">
-    This group is <strong>public</strong> to view, but only members can
-    post.
-  </p>
-  <div tal:replace="structure provider:edem.PoliciesInfo"/>
   <div tal:condition="view/loggedInUser/anonymous"
        id="gs-group-member-info-public-group-info-anon"
        class="well well-small">
+    <div id="gs-group-member-info-public-group-info-anon-sign-up">
+      <h4>Not a member?</h4>
+      <p>
+        <a class="btn btn-small" data-icon="&#10010;"
+           tal:attributes="href string:/request_registration.html?form.groupId=${view/groupInfo/id}"
+           href="/register.html">Join</a> to become a member.
+      </p>
+    </div><!--gs-group-member-info-public-group-info-anon-sign-up-->
     <div id="gs-group-member-info-public-group-info-anon-sign-in">
       <h4>Already a member?</h4>
       <p>
@@ -18,14 +20,6 @@
            href="/login.html">Sign in</a> to post.
       </p>
     </div><!--gs-group-member-info-public-group-info-anon-sign-in-->
-    <div id="gs-group-member-info-public-group-info-anon-sign-up">
-      <h4>Not a member?</h4>
-      <p>
-        <a class="btn btn-small" data-icon="&#10010;"
-           tal:attributes="href string:/request_registration.html?form.groupId=${view/groupInfo/id}"
-           href="/register.html">Register</a> to become a member.
-      </p>
-    </div><!--gs-group-member-info-public-group-info-anon-sign-up-->
   </div><!--gs-group-member-info-public-group-info-anon-->
   <div tal:condition="not:view/loggedInUser/anonymous" class="well well-small"
        id="gs-group-member-info-public-group-info-signed-in">
@@ -33,4 +27,11 @@
        tal:attributes="href string:${view/groupInfo/relative_url}/join.html"
        data-icon="&#10010;" href="join.html">Join</a> and become a member.
   </div><!--gs-group-member-info-public-group-info-signed-in-->
+
+  <h3 id="gs-group-member-info-public-group-info-h">Membership</h3>
+  <p class="minor">
+    This group is <strong>public</strong> to view, but only members can
+    post.
+  </p>
+  <div tal:replace="structure provider:edem.PoliciesInfo"/>
 </div><!--gs-group-member-info-public-group-info-->
